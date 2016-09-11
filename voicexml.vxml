@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml version = "2.1" >
+   <menu dtmf="true">
+      <property name="inputmodes" value="dtmf"/>
+      <prompt>
+         For sales press 1, For support press 2.
+      </prompt>
+      <choice dtmf="1" next="#sales"/>
+      <choice dtmf="2" next="#support"/>
+      </menu>
+   <form id="sales">
+      <block>
+      <prompt>
+         Please wait while we transfer the call
+      </prompt>
+      </block>
+         <transfer name="MyCall" dest="tel:+14083438759" bridge="true" connecttimeout="20s"/>
+      </form>
+      <form id="support">
+      <block>
+      <prompt>
+         Please wait while we transfer the call
+      </prompt>
+      </block>
+         <transfer name="MyCall" dest="tel:+14083686487" bridge="true" connecttimeout="20s"/>
+   </form>
+</vxml>
