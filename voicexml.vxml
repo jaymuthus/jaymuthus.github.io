@@ -22,6 +22,6 @@
          Please wait while we transfer the call
       </prompt>
       </block>
-         <transfer name="MyCall" dest="tel:+14083686487" bridge="true" connecttimeout="20s"/>
+         <transfer name="MyCall" dest="tel:+14089817733" bridge="true" connecttimeout="20s"/>
    </form>
 </vxml>
