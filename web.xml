@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<display-name> My First App </display-name>
+	<description> My First App </description>
+	<servlet>
+		<servlet-name>MyFirstApp</servlet-name>
+		<servlet-class>MyFirstApp</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MyFirstApp</servlet-name>
+		<url-pattern>/sendSMS</url-pattern>
+	</servlet-mapping>
+    <servlet>
+		<servlet-name>VoiceXML</servlet-name>
+		<servlet-class>VoiceXML</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>VoiceXML</servlet-name>
+		<url-pattern>/voiceConfig</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>NexmoVoiceServlet</servlet-name>
+		<servlet-class>NexmoVoiceServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NexmoVoiceServlet</servlet-name>
+		<url-pattern>/NexmoVoiceServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>NexmoAppServlet</servlet-name>
+		<servlet-class>NexmoAppServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NexmoAppServlet</servlet-name>
+		<url-pattern>/NexmoAppServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>NexmoAccountServlet</servlet-name>
+		<servlet-class>NexmoAccountServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NexmoAccountServlet</servlet-name>
+		<url-pattern>/AccountDetails</url-pattern>
+	</servlet-mapping>
+</web-app>
+
