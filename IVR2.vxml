@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vxml version = "2.1">
+    <form id="welcome">
+        <field name="call_type">
+            <prompt>Thank you for calling Apptivo. For sales press 1 or say 'sales', for support press 2 or say 'support'.</prompt>
+            <grammar xml:lang="en-US" root = "TOPLEVEL" mode="voice" >
+                <rule id="TOPLEVEL" scope="public">
+                    <one-of>
+                        <item> sales </item>
+                        <item> support </item>
+                    </one-of>
+                </rule>
+            </grammar>
+            <grammar xml:lang="en-US" root = "TOPLEVEL" mode="dtmf" >
+                <rule id="TOPLEVEL" scope="public">
+                    <one-of>
+                        <item> 1 <tag> out.call_type="sales"; </tag> </item>
+                        <item> 2 <tag> out.call_type="support"; </tag> </item>
+                    </one-of>
+                </rule>
+            </grammar>
+        </field>
+        <filled>
+            <prompt cond="call_type=='sales'">
+                Thank you for contacting us. Please wait while i transfer you to the sales representative.
+            </prompt>
+            <prompt cond="call_type=='support'">
+                Please wait while i transfer you to the help desk.
+            </prompt>
+            <goto expr="'#' + call_type" />
+        </filled>
+    </form>
+    <form id="sales">
+        <transfer name="sales" dest="tel:+14089817733" bridge="true">
+            <prompt>I'll connect you to sales.</prompt>
+        </transfer>
+    </form>
+    <form id="support">
+        <field name="menu">
+            <prompt>For customer support press 1 or say 'customer support', for technical support press 2 or say 'technical support'.</prompt>
+            <grammar xml:lang="en-US" root = "TOPLEVEL" mode="voice" >
+                <rule id="TOPLEVEL" scope="public">
+                    <one-of>
+                        <item> customer support </item>
+                        <item> technical support </item>
+                    </one-of>
+                </rule>
+            </grammar>
+            <grammar xml:lang="en-US" root = "TOPLEVEL" mode="dtmf" >
+                <rule id="TOPLEVEL" scope="public">
+                    <one-of>
+                        <item> 1 <tag> out.menu="customer support"; </tag> </item>
+                        <item> 2 <tag> out.menu="technical support"; </tag> </item>
+                    </one-of>
+                </rule>
+            </grammar>
+            <filled>
+                <goto expritem="menu" />
+            </filled>
+        </field>
+        <transfer name="customer support" dest="tel:+14083438759" bridge="true" expr="false">
+            <prompt>Connecting you to customer support representative.</prompt>
+        </transfer>
+        <transfer name="technical support" dest="tel:+14087189886" bridge="true" expr="false">
+            <prompt>Connecting you to technical support representative.</prompt>
+        </transfer>
+    </form>
+</vxml>
