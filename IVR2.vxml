@@ -22,7 +22,7 @@
         </field>
         <filled>
             <prompt cond="call_type=='sales'">
-                Thank you for contacting us. Please wait while i transfer you to the sales representative.
+                Thank you for contacting us.
             </prompt>
             <prompt cond="call_type=='support'">
                 Please wait while i transfer you to the help desk.
@@ -32,7 +32,7 @@
     </form>
     <form id="sales">
         <transfer name="sales" dest="tel:+14089817733" bridge="true">
-            <prompt>I'll connect you to sales.</prompt>
+            <prompt> Please wait while i transfer you to the sales representative.</prompt>
         </transfer>
     </form>
     <form id="support">
