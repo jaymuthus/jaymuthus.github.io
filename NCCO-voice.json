@@ -1,10 +1,10 @@
 [
   {
     "action": "talk",
-    "text": "Please enter a digit"
+    "text": "Thanks for calling Apptivo. For sales, press 1. For support, press 2."
   },
   {
     "action": "input",
-    "eventUrl": ["https://jaymuthus.github.io/IVR1.vxml"]
+    "eventUrl": ["https://jaymuthus.github.io/NCCO-Connect.json"]
   }
 ]
