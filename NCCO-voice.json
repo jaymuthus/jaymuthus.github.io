@@ -1,0 +1,10 @@
+[
+  {
+    "action": "talk",
+    "text": "Please enter a digit"
+  },
+  {
+    "action": "input",
+    "eventUrl": ["https://jaymuthus.github.io/IVR1.vxml"]
+  }
+]
