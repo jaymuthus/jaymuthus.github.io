@@ -32,7 +32,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>NexmoAppServlet</servlet-name>
-		<url-pattern>/NexmoAppServlet</url-pattern>
+		<url-pattern>/ApplicationSetup</url-pattern>
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>NexmoAccountServlet</servlet-name>
