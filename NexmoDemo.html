@@ -1,11 +1,11 @@
 <html>
 	<head>
 		<style type="text/css">
-			button[type=submit]{
+			button{
 			    background-color: #0000ff;
 			    border:0;
 			    padding:5px;
-			    font-size:0.8em;
+			    font-size:0.5em;
 			    border-radius:4px;
 			    color:#ffffff;
 			    cursor:pointer;
@@ -23,17 +23,134 @@
 			}
 
 			fieldset{
-				width: 30%;
+				width: 20%;
 			}
 		</style>
+
+		<script>
+			function getPricing() {
+				alert(document.getElementById("country").value);
+			}
+		</script>
 	</head>
 	<body>
-	<h2> Nexmo SMS</h2>
-			<div>
-				<a href="AccountDetails?q=numbers">List Numbers </a>
-				</br>
-				<a href="AccountDetails?q=get-balance">Get Balance </a>
-			</div>
-	
+	<h2> Nexmo Demo</h2>
+		<div>
+		<h2>Account API</h2>
+			<ul>
+				<li><a href="AccountDetails?q=numbers">List Numbers </a></li>
+				<li><a href="AccountDetails?q=balance">Get Balance </a></li>
+				<li>
+					<form action="AccountDetails" method="POST">
+						<fieldset>
+							<legend>Get Pricing</legend>
+							<label>Country: </label>
+							<select id="country" name="country">
+								<option value="US">USA</option>
+								<option value="CA">Canada</option>
+								<option value="ES">Spain</option>
+							</select>
+							<input type="hidden" name="q" value="pricing">
+							<button type="submit">Get Pricing</button>
+						</fieldset>
+					</form>
+				</li>
+				<li><a href="AccountDetails?q=search">Get Numbers List</a></li>
+				
+				<li>
+					<form action="AccountDetails" method="POST">
+						<fieldset>
+							<legend>Check Availability</legend>
+							<label>Country: </label>
+							<select id="country" name="country">
+								<option value="US">USA</option>
+								<option value="ES">Spain</option>
+								<option value="CA">Canada</option>
+							</select>
+							<input type="hidden" name="q" value="check">
+							<label>Phone Number: </label><input type="text" name="phoneno">
+							<button type="submit">Check Availability</button>
+						</fieldset>
+					</form>
+				</li>
+				<li>
+					<form action="AccountDetails" method="POST">
+						<fieldset>
+							<legend>Buy Number</legend>
+							<label>Country: </label>
+							<select id="country" name="country">
+								<option value="US">USA</option>
+								<option value="ES">Spain</option>
+								<option value="CA">Canada</option>
+							</select>
+							<input type="hidden" name="q" value="buy">
+							<label>Phone Number: </label><input type="text" name="phoneno">
+							<button type="submit">Buy Number</button>
+						</fieldset>
+					</form>
+				</li>
+			</ul>
+		</div>
+		
+		<div>
+			<h2>Application API</h2>
+			<ul>
+				<li><a href="ApplicationSetup?q=list">List Applications</a></li>
+				<li>
+					<form action="ApplicationSetup" method="POST">
+						<fieldset>
+							<legend>Create Application</legend>
+							<label>App Name: </label>
+							<input type="text" name="appName"> <br/>
+							<label>Answer URL </label>
+							<input type="text" name="answerUrl" value="https://jaymuthus.github.io/NCCO-voice.json"> <br/>
+							<label>Event URL </label>
+							<input type="text" name="eventUrl" value="https://jaymuthus.github.io/IVR1.vxml"> <br/>
+							<input type="hidden" name="q" value="create">
+							<button type="submit">Create Application</button>
+						</fieldset>
+					</form>
+				</li>
+				<li>
+					<form action="ApplicationSetup" method="POST">
+						<fieldset>
+							<legend>Get Application Details</legend>
+							<label>App Id: </label>
+							<input type="text" name="appId" > <br/>
+							<input type="hidden" name="q" value="get">
+							<button type="submit">Get Details</button>
+						</fieldset>
+					</form>
+				</li>
+				<li>
+					<form action="ApplicationSetup" method="POST">
+						<fieldset>
+							<legend>Update Application</legend>
+							<label>App Id: </label>
+							<input type="text" name="appId" > <br/>
+							<label>App Name: </label>
+							<input type="text" name="appName"> <br/>
+							<label>Answer URL </label>
+							<input type="text" name="answerUrl" value="https://jaymuthus.github.io/NCCO-voice.json"> <br/>
+							<label>Event URL </label>
+							<input type="text" name="eventUrl" value="https://jaymuthus.github.io/IVR1.vxml"> <br/>
+							<input type="hidden" name="q" value="update">
+							<button type="submit">Update Application</button>
+						</fieldset>
+					</form>
+				</li>
+				<li>
+					<form action="ApplicationSetup" method="POST">
+						<fieldset>
+							<legend>Delete Application</legend>
+							<label>App Id: </label>
+							<input type="text" name="appId"> <br/>
+							<input type="hidden" name="q" value="delete">
+							<button type="submit">Delete Application</button>
+						</fieldset>
+					</form>
+				</li>
+			</ul>
+		</div>
 </body>
 </html>
