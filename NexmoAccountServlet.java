@@ -48,7 +48,7 @@ public class NexmoAccountServlet extends HttpServlet {
 
         switch(action) {
             case "numbers" :
-                url = baseUrl + "account/Numbers" + "?"+query; 
+                url = baseUrl + "account/numbers" + "?"+query; 
                 break;
             case "balance" :
                 url = baseUrl + "account/get-balance" + "?"+query; 
