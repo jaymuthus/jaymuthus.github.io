@@ -152,5 +152,49 @@
 				</li>
 			</ul>
 		</div>
+		<div>
+			<h2>Number Update</h2>
+			<ul>
+				<li>
+					<form action="AccountDetails" method="POST">
+						<fieldset>
+							<legend>Link VoiceXML</legend>
+							<input type="hidden" name="q" value="voicexml">
+							<label>Country: </label>
+							<select id="country" name="country">
+								<option value="US">USA</option>
+								<option value="ES">Spain</option>
+								<option value="CA">Canada</option>
+							</select><br/>
+							<label>Phone Number: </label><input type="text" name="phoneno" value="12673684844"><br/>
+							<label>MO HTTP URL </label>
+							<input type="text" name="moHttpUrl" value="https://jaymuthus.github.io/voicexml.vxml"> <br/>
+							<label>Callback URL </label>
+							<input type="text" name="callbackUrl" value="https://jaymuthus.github.io/voicexml.vxml"> <br/>
+							<button type="submit">Update Number</button>
+						</fieldset>
+					</form>
+				</li>
+				<li>
+					<form action="AccountDetails" method="POST">
+						<fieldset>
+							<legend>Link Application</legend>
+							<input type="hidden" name="q" value="linkapp">
+							<label>Country: </label>
+							<select id="country" name="country">
+								<option value="US">USA</option>
+								<option value="ES">Spain</option>
+								<option value="CA">Canada</option>
+							</select><br/>
+							<label>Phone Number: </label><input type="text" name="phoneno" value="12673684844"><br/>
+							<label>App Id</label>
+							<input type="text" name="appId" value="379d12ba-a49d-497b-843e-fa29c98ac91c"> <br/>
+							<label>MO HTTP URL </label>
+							<input type="text" name="moHttpUrl" value="https://jaymuthus.github.io/NCCO-voice.json"> <br/>
+							<button type="submit">Update Number</button>
+						</fieldset>
+					</form>
+				</li>
+		</div>
 </body>
 </html>
