@@ -42,29 +42,34 @@ public class NexmoAccountServlet extends HttpServlet {
             URLEncoder.encode("api_key", charset),
             URLEncoder.encode("api_secret", charset));
 
-        String countrycode = "", phoneno="";
+        String countrycode = "", phoneno="", moHttpUrl="", callbackUrl="", appId="";
         String url="";
         String action = request.getParameter("q");
-
+        String responseJSON ="";
         switch(action) {
             case "numbers" :
                 url = baseUrl + "account/numbers" + "?"+query; 
+                responseJSON = getResponseJSON(url, 3600);
                 break;
             case "balance" :
                 url = baseUrl + "account/get-balance" + "?"+query; 
+                responseJSON = getResponseJSON(url, 3600);
                 break;
             case "pricing" :
                 countrycode = request.getParameter("country");
-                url = baseUrl + "account/get-pricing/outbound" + "?"+query+"&country="+countrycode; 
+                url = baseUrl + "account/get-pricing/outbound" + "?"+query+"&country="+countrycode;
+                responseJSON = getResponseJSON(url, 3600); 
                 break;
             case "search" :
                 //String countrycode = request.getParameter("country");
                 url = baseUrl + "number/search" + "?"+query+"&country=US&size=100"; //+countrycode; 
+                responseJSON = getResponseJSON(url, 3600);
                 break;
             case "check":
                 countrycode = request.getParameter("country");
                 phoneno = request.getParameter("phoneno");
                 url = baseUrl + "number/search" + "?"+query+"&country="+countrycode+"&pattern="+phoneno+"&search_pattern=1";
+                responseJSON = getResponseJSON(url, 3600);
                 break;
             case "buy" :
                 countrycode = request.getParameter("country");
@@ -75,15 +80,46 @@ public class NexmoAccountServlet extends HttpServlet {
                             URLEncoder.encode("api_secret", charset), 
                             URLEncoder.encode("country", charset), 
                             URLEncoder.encode("msisdn",charset));
+                responseJSON = getResponseJSON(url, query, 3600);
+                break;
+            case "linkapp" :
+                countrycode = request.getParameter("country");
+                phoneno = request.getParameter("phoneno");
+                appId = request.getParameter("appId");
+                moHttpUrl = request.getParameter("moHttpUrl");
+                url = baseUrl + "number/update";
+
+                query = String.format("api_key="+api_key+"&api_secret="+api_secret+"&country="+countrycode+"&msisdn="+phoneno+"&moHttpUrl="+moHttpUrl+"&voiceCallbackType=app&voiceCallbackValue="+appId,
+                            URLEncoder.encode("api_key", charset),
+                            URLEncoder.encode("api_secret", charset), 
+                            URLEncoder.encode("country", charset), 
+                            URLEncoder.encode("msisdn", charset),
+                            URLEncoder.encode("voiceCallbackType",charset),
+                            URLEncoder.encode("voiceCallbackValue",charset));
+                responseJSON = getResponseJSON(url, query, 3600);
+
+                break;
+            case "voicexml" :
+                countrycode = request.getParameter("country");
+                moHttpUrl = request.getParameter("moHttpUrl");
+                phoneno = request.getParameter("phoneno");
+                callbackUrl = request.getParameter("callbackUrl");
+                url = baseUrl + "number/update";
+
+                query = String.format("api_key="+api_key+"&api_secret="+api_secret+"&country="+countrycode+"&msisdn="+phoneno+"&moHttpUrl="+moHttpUrl+"&moSmppSysType=inbound&voiceCallbackType=vxml&voiceCallbackValue="+callbackUrl,
+                            URLEncoder.encode("api_key", charset),
+                            URLEncoder.encode("api_secret", charset), 
+                            URLEncoder.encode("country", charset), 
+                            URLEncoder.encode("msisdn", charset),
+                            URLEncoder.encode("moHttpUrl", charset),
+                            URLEncoder.encode("moSmppSysType",charset),
+                            URLEncoder.encode("voiceCallbackType",charset),
+                            URLEncoder.encode("voiceCallbackValue",charset));
+                responseJSON = getResponseJSON(url, query, 3600);
+
                 break;
         }
         System.out.println(url);
-        String responseJSON ="";
-        if (action.equals("buy")) {
-            responseJSON = getResponseJSON(url, query, 3600);
-        } else {
-            responseJSON = getResponseJSON(url, 3600);
-        }
 
         out.println(responseJSON);
         System.out.println(responseJSON);
@@ -188,27 +224,31 @@ public class NexmoAccountServlet extends HttpServlet {
                 System.out.println(con.getResponseCode());
             
                 int status = con.getResponseCode();
-                BufferedReader br;
+                BufferedReader br = null;
 
                 System.out.println ("Response Code : " + status);
 
                // if (status == HttpURLConnection.HTTP_OK) { //success
                  if (status == 201) { //success
                     br = new BufferedReader(new InputStreamReader(con.getInputStream()));
-                } else {
+                } else if( status == 200){
+                    responseJSON = "SUCCESS - Number updated";
+                }
+                else {
                     br = new BufferedReader(new InputStreamReader((con.getErrorStream())));
                     System.out.println("-----ERROR------");
                 }
 
                 String inputLine;
                 StringBuffer response = new StringBuffer();
+                if (br != null) {
+                    while ((inputLine = br.readLine()) != null) {
+                        response.append(inputLine);
+                    }
+                    br.close();
 
-                while ((inputLine = br.readLine()) != null) {
-                    response.append(inputLine);
+                    responseJSON = response.toString();
                 }
-                br.close();
-
-                responseJSON = response.toString();
 
             }
             finally {
