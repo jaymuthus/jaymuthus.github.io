@@ -2,7 +2,7 @@
     {
     "action": "talk",
     "text": "Thank you for calling Apptivo"
-  }
+  },
   {
     "action": "connect",
     "eventUrl": "https://jaymuthus.github.io/NCCO-voice.json",
