@@ -1,10 +1,8 @@
 [
   {
     "action": "talk",
-    "text": "Thanks for calling Apptivo!"
-  },
-  {
-    "action": "record"
+    "loop": "3",
+    "text": "Please wait while we transfer your call"
   },
   {
     "action": "connect",
@@ -12,10 +10,13 @@
     "endpoint": [{
         "type": "phone",
         "number": "14083686487"
-    },
-    {
-       "type": "phone",
-        "number": "14089817733"
     }]
+  },
+  {
+    "action": "talk",
+    "text": "Please record your message, we will get back to you soon"
+  },
+   {
+    "action": "record"
   }
 ]
