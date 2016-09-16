@@ -1,7 +1,6 @@
 [
   {
     "action": "talk",
-    "loop": "3",
     "text": "Please wait while we transfer your call"
   },
   {
