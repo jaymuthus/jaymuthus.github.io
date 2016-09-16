@@ -9,12 +9,11 @@
     "endpoint": [
       {
         "type": "phone",
-        "number": "14089817733",
-        "dtmfAnswer": "*123p456#"
+        "number": "14089817733"
       },
       {
         "type": "phone",
-        "number": "14083438759",
+        "number": "14083438759"
       }
     ]
   }
