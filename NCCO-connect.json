@@ -3,26 +3,4 @@
     "action": "talk",
     "text": "You are listening to a Call made with Voice API"
   }
-  {
-    "action": "connect",
-    "eventUrl": "https://jaymuthus.github.io/NCCO-voice.json",
-    "from": "14089817733",
-    "endpoint": [
-      {
-        "type": "phone",
-        "number": "14089817733",
-        "dtmfAnswer": "*123p456#"
-      },
-      {
-        "type": "phone",
-        "number": "14083438759",
-      }
-    ]
-  }
-    {
-    "action": "connect",
-    "endpoint": [{
-        "type": "phone",
-        "number": "14089817733"
-    }]
-}]
+]
