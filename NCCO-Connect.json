@@ -3,10 +3,4 @@
     "action": "talk",
     "text": "You are listening to a Call made with Voice API"
   }
-    {
-    "action": "connect",
-    "endpoint": [{
-        "type": "phone",
-        "number": "14089817733"
-    }]
-}]
+ ]
