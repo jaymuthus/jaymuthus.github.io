@@ -1,7 +1,7 @@
 [
   {
     "action": "talk",
-    "text": "Hello from Nexmo!"
+    "text": "Thanks for calling Apptivo!"
   },
   {
     "action": "record"
@@ -11,6 +11,10 @@
     "endpoint": [{
         "type": "phone",
         "number": "14089817733"
+    },
+    {
+       "type": "phone",
+        "number": "14083438759"
     }]
   }
 ]
