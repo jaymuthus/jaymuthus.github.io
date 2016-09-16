@@ -10,11 +10,11 @@
     "action": "connect",
     "endpoint": [{
         "type": "phone",
-        "number": "14089817733"
+        "number": "14083686487"
     },
     {
        "type": "phone",
-        "number": "14083686487"
+        "number": "14089817733"
     }]
   }
 ]
