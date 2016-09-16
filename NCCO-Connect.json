@@ -1,16 +1,16 @@
 [
   {
+    "action": "talk",
+    "text": "Hello from Nexmo!"
+  },
+  {
+    "action": "record"
+  },
+  {
     "action": "connect",
-    "eventUrl": "https://jaymuthus.github.io/NCCO-voice.json",
-    "endpoint": [
-      {
+    "endpoint": [{
         "type": "phone",
         "number": "14089817733"
-      },
-      {
-        "type": "phone",
-        "number": "14083438759"
-      }
-    ]
+    }]
   }
- ]
+]
