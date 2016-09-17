@@ -12,8 +12,7 @@
     "timeout": "20",
     "endpoint": [{
         "type": "phone",
-        "number": "14089817733",
-        "dtmf":"12345#"
+        "number": "14089817733"
     }]
   },
   {
