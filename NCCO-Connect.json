@@ -1,7 +1,7 @@
 [
   {
     "action": "talk",
-    "text": "Please wait while we transfer your call"
+    "text": "Thank you for calling Glocial technologies. Press 1 or sales, 2 for support"
   },
   {
     "action":"input",
@@ -12,7 +12,8 @@
     "timeout": "20",
     "endpoint": [{
         "type": "phone",
-        "number": "14089817733"
+        "number": "14089817733",
+        "dtmf": "12345"
     }]
   },
   {
