@@ -2,5 +2,9 @@
   {
     "action": "talk",
     "text": "Thank you for calling Glocial technologies. Press 1 or sales, 2 for support"
+  },
+  {
+    "action":"input",
+    "eventUrl":"http://requestb.in/1jvpvcp1"
   }
 ]
