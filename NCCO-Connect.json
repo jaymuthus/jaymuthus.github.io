@@ -4,6 +4,10 @@
     "text": "Please wait while we transfer your call"
   },
   {
+    "action":"input",
+    "eventurl":"http://requestb.in/1jvpvcp1"
+  },
+  {
     "action": "connect",
     "timeout": "20",
     "endpoint": [{
