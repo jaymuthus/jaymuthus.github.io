@@ -5,7 +5,7 @@
   },
   {
     "action":"input",
-    "eventurl":"http://requestb.in/1jvpvcp1"
+    "eventUrl":"http://requestb.in/1jvpvcp1"
   },
   {
     "action": "connect",
@@ -13,7 +13,7 @@
     "endpoint": [{
         "type": "phone",
         "number": "14089817733",
-        "dtmf": "12345"
+        "dtmf":"12345#"
     }]
   },
   {
