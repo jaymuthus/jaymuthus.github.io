@@ -2,24 +2,5 @@
   {
     "action": "talk",
     "text": "Thank you for calling Glocial technologies. Press 1 or sales, 2 for support"
-  },
-  {
-    "action":"input",
-    "eventUrl":"http://requestb.in/1jvpvcp1"
-  },
-  {
-    "action": "connect",
-    "timeout": "20",
-    "endpoint": [{
-        "type": "phone",
-        "number": "14089817733"
-    }]
-  },
-  {
-    "action": "talk",
-    "text": "Please record your message, we will get back to you soon"
-  },
-   {
-    "action": "record"
   }
 ]
