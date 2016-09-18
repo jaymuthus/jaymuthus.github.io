@@ -42,5 +42,13 @@
 		<servlet-name>NexmoAccountServlet</servlet-name>
 		<url-pattern>/AccountDetails</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>NexmoEventServlet</servlet-name>
+		<servlet-class>NexmoEventServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NexmoEventServlet</servlet-name>
+		<url-pattern>/EventCallback</url-pattern>
+	</servlet-mapping>
 </web-app>
 
