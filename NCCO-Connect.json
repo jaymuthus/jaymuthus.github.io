@@ -1,10 +1,10 @@
 [
   {
     "action": "talk",
-    "text": "Thank you for calling Glocial technologies. Press 1 or sales, 2 for support"
+    "text": "Thank you for calling Glocial technologies. For sales, press 1, for support, press 2.",
+    "voice_name": "Amy"
   },
   {
-    "action":"input",
-    "eventUrl":"http://requestb.in/1anmn6z1"
+    "action": "input"
   }
 ]
