@@ -14,8 +14,7 @@
     ]
   },
   {
-    "action" : "stream",
-    "streamUrl":["https://jaymuthus.github.io/hold-music.wav"]
+    "action" : "record"
   }
 ]
 
