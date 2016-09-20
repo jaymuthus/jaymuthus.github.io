@@ -5,11 +5,28 @@
   },
   {
     "action": "connect",
+    "timeout":"5",
     "endpoint": [
       {
         "type": "phone",
         "number": "14089817733"
-      },
+      }
+    ]
+  },
+  {
+    "action": "connect",
+    "timeout":"5",
+    "endpoint": [
+      {
+        "type": "phone",
+        "number": "14083438759"
+      }
+    ]
+  },
+  {
+    "action": "connect",
+    "timeout":"5",
+    "endpoint": [
       {
         "type": "phone",
         "number": "14083686487"
