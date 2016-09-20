@@ -4,6 +4,10 @@
     "text":"connecting to sales team"
   },
   {
+    "action" : "stream",
+    "streamUrl":"https://jaymuthus.github.io/hold-music.wav"
+  },
+  {
     "action": "connect",
     "timeout":"10",
     "endpoint": [
