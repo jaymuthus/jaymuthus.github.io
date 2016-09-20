@@ -1,0 +1,18 @@
+[
+  {
+    "action": "connect",
+    "eventUrl": "https://example.com/events",
+    "from": "441632960960",
+    "endpoint": [
+      {
+        "type": "phone",
+        "number": "14089817733",
+        "dtmfAnswer": "*123p456#"
+      },
+      {
+        "type": "phone",
+        "number": "14083686487",
+      }
+    ]
+  }
+]
