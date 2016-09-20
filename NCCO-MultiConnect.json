@@ -5,7 +5,7 @@
   },
   {
     "action" : "connect",
-    "endpoint":{
+    "endpoint":[{
     "action": "connect",
     "timeout":"15",
     "endpoint": [
@@ -14,7 +14,7 @@
         "number": "14089817733"
       }
     ]
-    }
+    }]
   }
   
 ]
