@@ -4,7 +4,8 @@
     "text":"connecting to sales team"
   },
   {
-    "action" : {
+    "action" : "connect",
+    "endpoint":{
     "action": "connect",
     "timeout":"15",
     "endpoint": [
