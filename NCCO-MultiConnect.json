@@ -4,17 +4,16 @@
     "text":"connecting to sales team"
   },
   {
+    "action" : {
     "action": "connect",
     "timeout":"15",
     "endpoint": [
       {
         "type": "phone",
         "number": "14089817733"
-      },
-      {
-        "type": "phone",
-        "number": "14083686487"
       }
     ]
+    }
   }
+  
 ]
