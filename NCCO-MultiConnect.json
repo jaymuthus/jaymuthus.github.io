@@ -5,11 +5,11 @@
   },
   {
     "action": "connect",
+    "timeout":"15",
     "endpoint": [
       {
         "type": "phone",
         "number": "14089817733",
-        "dtmfAnswer": "*123p456#"
       },
       {
         "type": "phone",
