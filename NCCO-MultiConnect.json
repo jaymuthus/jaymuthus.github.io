@@ -1,8 +1,11 @@
 [
   {
+    "action":"talk",
+    "text":"connecting to sales team"
+  },
+  {
     "action": "connect",
-    "eventUrl": "https://example.com/events",
-    "from": "441632960960",
+    "timeout":"15",
     "endpoint": [
       {
         "type": "phone",
