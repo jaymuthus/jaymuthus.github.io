@@ -5,7 +5,6 @@
   },
   {
     "action": "connect",
-    "timeout":"15",
     "endpoint": [
       {
         "type": "phone",
