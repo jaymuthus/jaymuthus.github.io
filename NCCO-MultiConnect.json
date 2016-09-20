@@ -14,24 +14,8 @@
     ]
   },
   {
-    "action": "connect",
-    "timeout":"5",
-    "endpoint": [
-      {
-        "type": "phone",
-        "number": "14083438759"
-      }
-    ]
-  },
-  {
-    "action": "connect",
-    "timeout":"5",
-    "endpoint": [
-      {
-        "type": "phone",
-        "number": "14083686487"
-      }
-    ]
+    "action": "talk",
+    "text" : "Please leave your message"
   }
 ]
 
