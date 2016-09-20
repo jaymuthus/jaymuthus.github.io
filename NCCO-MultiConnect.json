@@ -5,7 +5,7 @@
   },
   {
     "action" : "stream",
-    "streamUrl":"https://jaymuthus.github.io/hold-music.wav"
+    "streamUrl":["https://jaymuthus.github.io/hold-music.wav"]
   },
   {
     "action": "connect",
@@ -16,10 +16,6 @@
         "number": "14089817733"
       }
     ]
-  },
-  {
-    "action": "talk",
-    "text" : "Please leave your message"
   }
 ]
 
