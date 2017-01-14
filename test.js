@@ -1,8 +1,5 @@
 
-function test() {
-  this.getMessage = function() {
+  var getMessage = function() {
     return 'Success!';
   }
-}
 
-module.exports = test;
